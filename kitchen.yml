@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+
+  network:
+      - ['public_network',  {ip: '192.168.88.121'}]
+
+provisioner:
+  name: chef_zero
+  product_name: chef
+  product_version: 16.4.41
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-7
+
+suites:
+  - name: default
+    run_list:
+      - recipe[docker_monitor::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
