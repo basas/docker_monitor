@@ -6,7 +6,7 @@ description         'Installs and configures Docker for monitoring system and sh
 source_url          'https://github.com/basas/docker_monitor'
 issues_url          'https://github.com/basas/docker_monitor/issues'
 chef_version        '>= 15.0'
-version             '0.1.0'
+version             '1.0.0'
 
 supports            'centos'
 
