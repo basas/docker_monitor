@@ -2,7 +2,7 @@ Layout/LineLength:
   Max: 120
 
 Layout/EndOfLine:
-  EnforcedStyle: lf
+  EnforcedStyle: crlf
 
 Metrics/MethodLength:
   Max: 30

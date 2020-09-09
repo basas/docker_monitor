@@ -1,5 +1,4 @@
 # Attributes
-# default['docker_monitor']['listen_address'] = '127.0.0.1'
 default['docker_monitor']['listen_address'] = node['ipaddress']
 
 default['docker_monitor']['docker']['version'] = '19.03.12'

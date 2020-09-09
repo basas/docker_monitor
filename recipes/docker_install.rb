@@ -13,5 +13,4 @@ end
 # dir for volumes
 directory '/etc/opt/docker' do
   mode    '0755'
-  action  :create
 end

@@ -10,6 +10,6 @@ end
 
 ip_addr = command("ifconfig eth0 |grep \"inet \" | awk '{print $2}'").stdout.strip
 
-describe command('curl -s http://' + ip_addr + ':9100') do
+describe command("curl -s http://#{ip_addr}:9100") do
   its('stdout') { should match(/.*Node Exporter.*/) }
 end

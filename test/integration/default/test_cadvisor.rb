@@ -13,6 +13,6 @@ end
 
 ip_addr = command("ifconfig eth0 |grep \"inet \" | awk '{print $2}'").stdout.strip
 
-describe command('curl -s http://' + ip_addr + ':8080/containers/') do
+describe command("curl -s http://#{ip_addr}:8080/containers/") do
   its('stdout') { should match %r{.*cAdvisor - \/.*} }
 end
