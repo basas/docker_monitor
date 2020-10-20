@@ -10,5 +10,5 @@ version             '1.0.0'
 
 supports            'centos'
 
-depends             'docker', '= 6.0.3'
+depends             'docker', '= 7.0'
 depends             'prometheus_exporters', '= 0.17.2'

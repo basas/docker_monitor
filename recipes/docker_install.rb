@@ -4,10 +4,17 @@
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
-docker_service 'default' do
-  install_method  'package'
-  version         node['docker_monitor']['docker']['version']
-  action          [:create, :start]
+#docker_service 'default' do
+#  install_method  'tarball'
+#  version         node['docker_monitor']['docker']['version']
+#  action          [:create, :start]
+#end
+yum_package 'docker' do
+    action :install
+end
+
+service 'docker' do
+    action :start
 end
 
 # dir for volumes

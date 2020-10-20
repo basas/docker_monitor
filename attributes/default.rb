@@ -1,7 +1,7 @@
 # Attributes
 default['docker_monitor']['listen_address'] = node['ipaddress']
 
-default['docker_monitor']['docker']['version'] = '19.03.12'
+default['docker_monitor']['docker']['version'] = '19.03'
 
 default['docker_monitor']['cadvisor']['version'] = 'v0.36.0'
 
